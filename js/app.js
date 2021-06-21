@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", event => {
     event.preventDefault();
     const smileContent = document.querySelector(".popup-wrapper");
     let i = 5;
-
+    // make cards with smiles in popup
     data.forEach((item) => {
         smileContent.append(makeSmilesCards(item.items, item.title, i));
     })
@@ -19,13 +19,14 @@ document.addEventListener("DOMContentLoaded", event => {
    const popupSection = document.querySelectorAll(".popup-wrapper");
    const recentlyUsed = document.querySelector(".recentlyUse");
    let lastSmiles = [];
+   // make recently used smiles in popup
    recentlyUsed.textContent = "";
    recentlyUsed.append(makeSmilesCards(lastSmiles));
-
+   
    putSmilesInInput(textArea, i, smileContent, popupSection, recentlyUsed, lastSmiles);
-
+   // add event listener to switch popup between all smiles and recently use
    switcherBetweenAllAndRecently(textArea, recentlyUsed);
    openPopup(textArea);
    
-    underlineEmailHashLink(textArea);
+   underlineEmailHashLink(textArea);
 })

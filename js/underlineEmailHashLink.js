@@ -1,11 +1,11 @@
-import placeCaret from "./placeCaret";
+
 function underlineEmailHashLink(textArea){
     const regExpForEmail = /@\w+\.\w+/mgi;
     const regExpForHashTag = /#\w+/mgi;
     const regExpForMention = /@\w+/mgi
     const regExpForLinks = /^(http|https):\/\/[^ "]/;
 
-    let alsoUsed = [];
+
     textArea.addEventListener("focusout", (event) => {
           const arr = textArea.textContent.split(" ");
           const newArr = arr.filter((item) => {
