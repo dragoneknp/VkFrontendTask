@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+        <div class="content">
+            <div class="message-content">
+                <div contenteditable=true class="message-content__textarea" data-text="Ваше сообщение"></div>
+                
+            <div tabindex="2" class="message-content__smileIcon">
+            </div>
+            </div>
+            <div class="popup close">
+                <div class="popup-wrapper allSmiles visible"></div>
+                <div class="popup-wrapper recentlyUse hidden"></div>
+                <div class="popup-footer">
+                    <a tabindex="3" href="" class="popup-footer__allsmiles onfocus"><img src="/img/allsmiles.svg" alt=""></a>
+                    <a tabindex="4" href="" class="popup-footer__recentlyseen"><img src="/img/recentlyseen.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    <script src="js/bundle.js"></script>
+</body>
+</html>
