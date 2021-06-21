@@ -9,7 +9,7 @@ function underlineEmailHashLink(textArea){
     textArea.addEventListener("focusout", (event) => {
           
           const arr = textArea.textContent.split(" ");
-          console.log(arr);
+          
           const newArr = arr.filter((item) => {
               item = item.trim();
               return (item.match(regExpForEmail) || item.match(regExpForHashTag) || item.match(regExpForMention) || item.match(regExpForLinks))
@@ -25,8 +25,9 @@ function underlineEmailHashLink(textArea){
               
           })
     textArea.addEventListener("focusin", () => {
-      // item = item.trim();
+      
       newArr.forEach((item) => {
+        
         textArea.innerHTML = textArea.innerHTML.replaceAll(`<a class="highlighted">${item}</a>`, item);
       })  
       
