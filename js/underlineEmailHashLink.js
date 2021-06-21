@@ -5,8 +5,9 @@ function underlineEmailHashLink(textArea){
     const regExpForMention = /@\w+/mgi
     const regExpForLinks = /^(http|https):\/\/[^ "]/;
 
-
+    
     textArea.addEventListener("focusout", (event) => {
+          
           const arr = textArea.textContent.split(" ");
           const newArr = arr.filter((item) => {
               
@@ -23,7 +24,10 @@ function underlineEmailHashLink(textArea){
               
           })
     textArea.addEventListener("focusin", () => {
-      textArea.innerHTML = textArea.textContent;
+      newArr.forEach((item) => {
+        textArea.innerHTML = textArea.innerHTML.replace(`<a class="highlighted">${item}</a>`, item);
+      })  
+      
     })
           
           
